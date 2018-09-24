@@ -19,6 +19,6 @@ link_libraries(pthreadLocklib)
 add_executable(pthreadLock main/pthreadLock.c)
 target_link_libraries(pthreadLock pthreadLocklib)
 
-#link_libraries(pthreadLocklib)
+link_libraries(pthreadSyncLib)
 add_executable(pthreadSync main/pthreadSync.c)
-#target_link_libraries(pthreadLock pthreadLocklib)
+target_link_libraries(pthreadSync pthreadSyncLib)

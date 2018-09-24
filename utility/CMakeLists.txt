@@ -1,2 +1,3 @@
 add_subdirectory(pthread)
 add_subdirectory(pthreadLock)
+add_subdirectory(pthreadSync)
