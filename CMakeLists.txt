@@ -22,3 +22,7 @@ target_link_libraries(pthreadLock pthreadLocklib)
 link_libraries(pthreadSyncLib)
 add_executable(pthreadSync main/pthreadSync.c)
 target_link_libraries(pthreadSync pthreadSyncLib)
+
+link_libraries(customStringlib)
+add_executable(string main/string.c)
+target_link_libraries(string customStringlib)
