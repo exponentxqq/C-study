@@ -17,7 +17,6 @@ int main()
     pthread_create(&pth_id1, NULL, decrement, &param);
     pthread_create(&pth_id2, NULL, increment, &param);
 
-
     pthread_join(pth_id1, NULL);
     pthread_join(pth_id2, NULL);
 

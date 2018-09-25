@@ -14,7 +14,7 @@ void *printPthread(void *pthreadParam)
 
 int process()
 {
-    pthread_t pth_id = NULL;
+    pthread_t pth_id;
     int *pth_red = NULL;
     int ret;
     int param = 11;
