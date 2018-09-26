@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <wchar.h>
 #include <string.h>
+#include <sys/errno.h>
 #include "customString.h"
 
 void printString()
@@ -38,6 +39,8 @@ void split()
     }
 }
 
+extern int errno;
+
 void split2()
 {
     char str[] = "192.168,111 121";
@@ -56,6 +59,11 @@ int main()
     split();
     split2();
 
+    char *str = "hello world!";
+    printf("strlen1=%zu\n", strlen1(str));
+    printf("strlen1=%zu\n", strlen2(str));
+    printf("strlen1=%zu\n", strlen3(str));
 
+    errno_t err = errno;
     return 0;
 }

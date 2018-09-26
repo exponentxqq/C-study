@@ -11,6 +11,8 @@ include_directories(include)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
+add_executable(test main/test.c)
+
 link_libraries(pthreadlib)
 add_executable(pthread main/pthread.c)
 target_link_libraries(pthread pthreadlib)
