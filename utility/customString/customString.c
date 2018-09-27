@@ -44,7 +44,7 @@ char *copystr(char *dst, const char *src)
 
 int comparestr(const char *s1, const char *s2)
 {
-    assert(s1 != NULL && s2 != NULL); // 断言只有在debug有效
+    assert(s1 != NULL && s2 != NULL); // 断言只有在debug有效，一切问题在debug中解决掉，release中就不用判断了，可以提高效率
     if (s1 == NULL || s2 == NULL) {
         return 1;
     }
@@ -55,27 +55,42 @@ int comparestr(const char *s1, const char *s2)
     return *s1 - *s2;
 }
 
-strsplit(int x)
+char *strsplit(char *str, const char *delimiter)
 {
-
+    if (str == NULL || delimiter == NULL) {
+        return NULL;
+    }
+    char *s1 = str;
+    while (*s1) {
+        char *d1 = (char *) delimiter;
+        while (*d1) {
+            if (*s1 == *d1) {
+                *s1 = '\0';
+                return str;
+            }
+            d1++;
+        }
+        s1++;
+    }
+    return NULL;
 }
 
-atoi()
+int stringtoint()
 {
-
+    return 0;
 }
 
-itoa()
+int itoa()
 {
-
+    return 0;
 }
 
-indexof()
+int indexof()
 {
-
+    return 0;
 }
 
-revstr()
+int revstr()
 {
-
+    return 0;
 }

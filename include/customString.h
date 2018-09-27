@@ -11,4 +11,6 @@ size_t strlen1(const char *str);
 size_t strlen2(const char *str);
 size_t strlen3(const char *str);
 
+char *strsplit(char *str, const char *delimiter);
+
 #endif //CPROGRAM_CUSTOMSTRING_H

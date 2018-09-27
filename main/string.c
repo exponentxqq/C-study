@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <wchar.h>
 #include <string.h>
-#include <sys/errno.h>
+#include <errno.h>
 #include "customString.h"
 
 void printString()
@@ -64,6 +64,10 @@ int main()
     printf("strlen1=%zu\n", strlen2(str));
     printf("strlen1=%zu\n", strlen3(str));
 
-    errno_t err = errno;
+    char str2[] = "127,0.0.1";
+    char *delimiter = ".,";
+    printf("split1=%s\n", strsplit(str2, delimiter));
+    printf("split1=%s\n", strsplit(str2, delimiter));
+
     return 0;
 }

@@ -6,6 +6,7 @@ link_directories(${PROJECT_SOURCE_DIR}/libs)
 if (UNIX)
     link_libraries(pthread)
 endif (UNIX)
+
 add_subdirectory(pthread)
 add_subdirectory(pthreadLock)
 add_subdirectory(pthreadSync)
